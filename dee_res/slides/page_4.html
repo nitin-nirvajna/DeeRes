@@ -1,0 +1,143 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI&#39;s Core Concept</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        body {width: 1280px; min-height: 720px; overflow: hidden; margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background: linear-gradient(135deg, #2b1055 0%, #7597de 100%);
+            color: white;
+        }
+        .geometric {
+            position: absolute;
+            opacity: 0.1;
+        }
+        .title-glow {
+            text-shadow: 0 0 15px rgba(255, 127, 80, 0.7);
+        }
+        .concept-card {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .concept-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .vs-divider {
+            width: 4px;
+            background: linear-gradient(to bottom, #8A4FFF, #FF7F50);
+        }
+        .feature-icon {
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;
+        }
+    
+html {
+    overflow: hidden;
+}</style>
+</head>
+<body>
+<div class="slide flex flex-col p-12" style=" overflow: hidden;">
+<!-- Background Elements -->
+<div class="absolute inset-0 overflow-hidden">
+<div class="geometric rounded-full bg-purple-500 w-96 h-96 -bottom-20 -right-20"></div>
+<div class="geometric rounded-full bg-orange-400 w-64 h-64 top-20 -left-20"></div>
+<div class="geometric rounded-full bg-teal-400 w-80 h-80 -top-40 right-40"></div>
+</div>
+<!-- Content Container -->
+<div class="z-10 flex flex-col h-full">
+<!-- Header -->
+<div class="mb-6">
+<h1 class="text-5xl font-bold mb-4 title-glow">AI&#39;s Core Concept</h1>
+<p class="text-xl text-gray-200">Systems designed to perceive, reason, and act by learning</p>
+</div>
+<!-- Main Content -->
+<div class="flex-1 flex flex-col">
+<!-- Definition -->
+<div class="bg-black bg-opacity-30 p-6 rounded-lg mb-6">
+<p class="text-2xl">
+<span class="text-orange-300 font-semibold">AI</span> is the science of creating intelligent machines that perform tasks requiring human intelligence.
+                    </p>
+</div>
+<!-- Comparison Section -->
+<div class="flex-1 flex justify-between gap-6">
+<!-- Traditional Programming -->
+<div class="concept-card p-6 flex-1">
+<div class="flex items-center mb-4">
+<div class="feature-icon bg-purple-700 mr-4">
+<i class="fas fa-code text-2xl text-white"></i>
+</div>
+<h2 class="text-2xl font-semibold text-purple-300">Traditional Programming</h2>
+</div>
+<ul class="space-y-4 text-gray-200">
+<li class="flex items-start">
+<i class="fas fa-check-circle text-purple-300 mt-1 mr-2"></i>
+<span>Explicit rules for every scenario</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-purple-300 mt-1 mr-2"></i>
+<span>Stop sign example: <span class="font-mono">IF shape=octagon AND color=red THEN stop_sign=True</span></span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-exclamation-triangle text-red-400 mt-1 mr-2"></i>
+<span>Fails when sign is faded or at angle</span>
+</li>
+</ul>
+</div>
+<!-- VS Divider -->
+<div class="vs-divider flex items-center justify-center">
+<div class="bg-white bg-opacity-20 rounded-full w-12 h-12 flex items-center justify-center">
+<span class="text-xl font-bold">VS</span>
+</div>
+</div>
+<!-- AI Programming -->
+<div class="concept-card p-6 flex-1">
+<div class="flex items-center mb-4">
+<div class="feature-icon bg-orange-500 mr-4">
+<i class="fas fa-brain text-2xl text-white"></i>
+</div>
+<h2 class="text-2xl font-semibold text-orange-300">AI Programming</h2>
+</div>
+<ul class="space-y-4 text-gray-200">
+<li class="flex items-start">
+<i class="fas fa-check-circle text-orange-300 mt-1 mr-2"></i>
+<span>Provide examples and labels</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-check-circle text-orange-300 mt-1 mr-2"></i>
+<span>Show computer thousands of stop sign and non-stop sign images</span>
+</li>
+<li class="flex items-start">
+<i class="fas fa-lightbulb text-yellow-300 mt-1 mr-2"></i>
+<span>AI creates its own rules based on patterns</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Key Takeaway -->
+<div class="mt-6 bg-black bg-opacity-40 p-4 rounded-lg">
+<div class="flex items-center">
+<i class="fas fa-lightbulb text-2xl text-yellow-300 mr-3"></i>
+<p class="text-xl"><span class="font-semibold">Key insight:</span> AI learns by example, like teaching a child to identify a stop sign.</p>
+</div>
+</div>
+<!-- Page Number -->
+<div class="absolute bottom-4 right-6 text-sm text-gray-300" style="visibility: hidden;">
+                4/19
+            </div>
+</div>
+</div>
+
+</body></html>

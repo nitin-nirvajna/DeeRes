@@ -1,0 +1,125 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Everyday AI Applications</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        body {width: 1280px; min-height: 732px; overflow: hidden; margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            min-height: 732px;
+            position: relative;
+            background: linear-gradient(135deg, #2b1055 0%, #7597de 100%);
+            color: white;
+        }
+        .geometric {
+            position: absolute;
+            opacity: 0.1;
+        }
+        .title-glow {
+            text-shadow: 0 0 15px rgba(255, 127, 80, 0.7);
+        }
+        .app-card {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .app-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .icon-container {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+    
+html {
+    overflow: hidden;
+}</style>
+</head>
+<body>
+<div class="slide flex flex-col p-12" style=" overflow: hidden;">
+<!-- Background Elements -->
+<div class="absolute inset-0 overflow-hidden">
+<div class="geometric rounded-full bg-purple-500 w-96 h-96 -bottom-20 -right-20"></div>
+<div class="geometric rounded-full bg-orange-400 w-64 h-64 top-20 -left-20"></div>
+<div class="geometric rounded-full bg-teal-400 w-80 h-80 -top-40 right-40"></div>
+</div>
+<!-- Content Container -->
+<div class="z-10 flex flex-col h-full">
+<!-- Header -->
+<div class="mb-6">
+<h1 class="text-5xl font-bold mb-4 title-glow">Everyday AI Applications</h1>
+<p class="text-xl text-gray-200">AI is no longer confined to research labs—it&#39;s an integral part of our daily routines</p>
+</div>
+<!-- Applications Grid -->
+<div class="grid grid-cols-2 gap-8 mt-4 flex-grow">
+<!-- Personalized Recommendations -->
+<div class="app-card p-6">
+<div class="flex items-start">
+<div class="icon-container bg-purple-700">
+<i class="fas fa-thumbs-up text-4xl text-purple-300"></i>
+</div>
+<div class="ml-4">
+<h2 class="text-2xl font-semibold text-purple-300">Personalized Recommendations</h2>
+<p class="text-gray-200 mt-3">When Netflix suggests a movie you end up loving or Spotify curates the perfect playlist for your mood, that&#39;s AI at work. These platforms analyze your past behavior and compare it with millions of other users to predict what you&#39;ll enjoy next.</p>
+</div>
+</div>
+</div>
+<!-- Voice Assistants -->
+<div class="app-card p-6">
+<div class="flex items-start">
+<div class="icon-container bg-orange-700">
+<i class="fas fa-microphone-alt text-4xl text-orange-300"></i>
+</div>
+<div class="ml-4">
+<h2 class="text-2xl font-semibold text-orange-300">Smart Assistants &amp; NLP</h2>
+<p class="text-gray-200 mt-3">Voice assistants like Siri and Alexa use Natural Language Processing (NLP) to understand and respond to your spoken commands. This same technology powers the conversational abilities of tools like ChatGPT, allowing us to interact with computers in a more human way.</p>
+</div>
+</div>
+</div>
+<!-- Navigation Apps -->
+<div class="app-card p-6">
+<div class="flex items-start">
+<div class="icon-container bg-teal-700">
+<i class="fas fa-map-marked-alt text-4xl text-teal-300"></i>
+</div>
+<div class="ml-4">
+<h2 class="text-2xl font-semibold text-teal-300">Navigation and Mapping</h2>
+<p class="text-gray-200 mt-3">Apps like Google Maps and Waze use AI to analyze real-time traffic data, predict congestion, and calculate the fastest route. They learn from the collective data of all users to provide dynamic, up-to-the-minute directions.</p>
+</div>
+</div>
+</div>
+<!-- Facial Recognition -->
+<div class="app-card p-6">
+<div class="flex items-start">
+<div class="icon-container bg-coral-700" style="background-color: rgba(255, 107, 107, 0.3);">
+<i class="fas fa-user-check text-4xl text-pink-300"></i>
+</div>
+<div class="ml-4">
+<h2 class="text-2xl font-semibold text-pink-300">Facial Recognition</h2>
+<p class="text-gray-200 mt-3">The ability to unlock your phone with your face or have social media automatically tag your friends in photos is a direct application of AI-powered computer vision. These systems analyze facial features and compare them to databases to identify individuals.</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Note -->
+<div class="mt-6 text-center text-gray-300">
+<p>These systems work quietly in the background to make daily life more convenient, personalized, and connected</p>
+</div>
+<!-- Page Number -->
+<div class="absolute bottom-4 right-6 text-sm text-gray-300" style="visibility: hidden;">
+                10/19
+            </div>
+</div>
+</div>
+
+</body></html>

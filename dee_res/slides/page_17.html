@@ -1,0 +1,179 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Visionary Projects</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        body {width: 1280px; min-height: 720px; overflow: hidden; margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background: linear-gradient(135deg, #2b1055 0%, #7597de 100%);
+            color: white;
+        }
+        .geometric {
+            position: absolute;
+            opacity: 0.1;
+        }
+        .title-glow {
+            text-shadow: 0 0 15px rgba(255, 127, 80, 0.7);
+        }
+        .project-card {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .highlight-text {
+            color: #FF7F50;
+            font-weight: 600;
+        }
+        .feature-item {
+            transition: all 0.3s ease;
+        }
+        .feature-item:hover {
+            transform: translateX(5px);
+        }
+    
+html {
+    overflow: hidden;
+}</style>
+</head>
+<body>
+<div class="slide flex flex-col p-12" style=" overflow: hidden;">
+<!-- Background Elements -->
+<div class="absolute inset-0 overflow-hidden">
+<div class="geometric rounded-full bg-purple-500 w-96 h-96 -bottom-20 -right-20"></div>
+<div class="geometric rounded-full bg-orange-400 w-64 h-64 top-20 -left-20"></div>
+<div class="geometric rounded-full bg-teal-400 w-80 h-80 -top-40 right-40"></div>
+</div>
+<!-- Content Container -->
+<div class="z-10 flex flex-col h-full">
+<!-- Header -->
+<div class="mb-6">
+<h1 class="text-5xl font-bold mb-4 title-glow">Visionary Projects</h1>
+<p class="text-xl text-gray-200">Exploring the cutting edge of AI innovation</p>
+</div>
+<!-- Projects Section -->
+<div class="flex gap-8 h-full">
+<!-- GNoME Project -->
+<div class="w-1/2">
+<div class="project-card p-6 flex flex-col">
+<div class="flex items-center mb-4">
+<i class="fas fa-atom text-3xl text-purple-300 mr-3"></i>
+<h2 class="text-2xl font-semibold">GNoME: Graph Networks for Materials Exploration</h2>
+</div>
+<div class="mb-4">
+<p class="text-lg mb-2"><span class="highlight-text">Google DeepMind&#39;s</span> revolutionary AI system that discovered:</p>
+<ul class="list-disc list-inside space-y-2 ml-2">
+<li><span class="highlight-text">2.2 million</span> new crystal structures</li>
+<li><span class="highlight-text">380,000</span> stable materials for future technologies</li>
+</ul>
+</div>
+<div class="flex-grow mb-4">
+<p class="text-gray-200">This discovery represents a volume of knowledge equivalent to nearly <span class="highlight-text">800 years</span> of prior human research, achieved in a fraction of the time.</p>
+</div>
+<!-- Simple D3 Visualization -->
+<div class="h-32 mt-auto" id="discovery-scale"></div>
+</div>
+</div>
+<!-- Generative World Models Project -->
+<div class="w-1/2">
+<div class="project-card p-6 flex flex-col">
+<div class="flex items-center mb-4">
+<i class="fas fa-brain text-3xl text-teal-300 mr-3"></i>
+<h2 class="text-2xl font-semibold">Generative World Models</h2>
+</div>
+<div class="mb-4">
+<p class="text-lg mb-2">AI systems like <span class="highlight-text">OpenAI&#39;s Sora</span> demonstrate:</p>
+<ul class="list-disc list-inside space-y-2 ml-2">
+<li>Emerging &#34;intuitive&#34; understanding of physics</li>
+<li>Comprehension of object permanence</li>
+<li>Recognition of cause-and-effect relationships</li>
+</ul>
+</div>
+<div class="flex-grow">
+<p class="text-gray-200 mb-4">These models can generate highly realistic and complex video scenes from simple text prompts.</p>
+<div class="bg-black bg-opacity-30 p-4 rounded-lg">
+<p class="text-sm italic text-gray-300">&#34;A critical step toward creating robots that can safely navigate and interact with the real world.&#34;</p>
+</div>
+</div>
+<!-- Features List -->
+<div class="mt-auto">
+<div class="feature-item flex items-center mb-2">
+<i class="fas fa-check-circle text-teal-300 mr-2"></i>
+<p>Understanding of physical world rules</p>
+</div>
+<div class="feature-item flex items-center">
+<i class="fas fa-check-circle text-teal-300 mr-2"></i>
+<p>Common sense reasoning capabilities</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Page Number -->
+<div class="absolute bottom-4 right-6 text-sm text-gray-300" style="visibility: hidden;">
+                17/19
+            </div>
+</div>
+</div>
+<script>
+        // Simple D3 visualization for GNoME discoveries
+        document.addEventListener('DOMContentLoaded', function() {
+            const svg = d3.select("#discovery-scale")
+                .append("svg")
+                .attr("width", "100%")
+                .attr("height", "100%");
+            
+            // Data based on document
+            const data = [
+                {label: "Crystal Structures", value: 2.2, color: "#8A4FFF"},
+                {label: "Stable Materials", value: 0.38, color: "#FF7F50"} // 380,000 out of 2.2M
+            ];
+            
+            // Create scales
+            const xScale = d3.scaleLinear()
+                .domain([0, d3.max(data, d => d.value)])
+                .range([0, 400]);
+            
+            // Draw bars
+            const bars = svg.selectAll("g")
+                .data(data)
+                .enter()
+                .append("g")
+                .attr("transform", (d, i) => `translate(50, ${i * 30 + 10})`);
+            
+            // Add rectangles
+            bars.append("rect")
+                .attr("width", d => xScale(d.value))
+                .attr("height", 20)
+                .attr("fill", d => d.color)
+                .attr("rx", 4)
+                .attr("ry", 4);
+            
+            // Add labels
+            bars.append("text")
+                .attr("x", 5)
+                .attr("y", 14)
+                .attr("fill", "white")
+                .text(d => d.label);
+            
+            // Add values
+            bars.append("text")
+                .attr("x", d => xScale(d.value) + 5)
+                .attr("y", 14)
+                .attr("fill", "white")
+                .text(d => d.value === 0.38 ? "380,000" : "2.2M");
+        });
+    </script>
+
+</body></html>

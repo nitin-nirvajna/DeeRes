@@ -1,0 +1,150 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI for Accessibility</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        body {width: 1280px; min-height: 720px; overflow: hidden; margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background: linear-gradient(135deg, #2b1055 0%, #7597de 100%);
+            color: white;
+        }
+        .geometric {
+            position: absolute;
+            opacity: 0.1;
+        }
+        .title-glow {
+            text-shadow: 0 0 15px rgba(255, 127, 80, 0.7);
+        }
+        .accessibility-card {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .accessibility-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .icon-container {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .benefit-item {
+            transition: all 0.3s ease;
+        }
+        .benefit-item:hover {
+            transform: translateX(5px);
+        }
+    
+html {
+    overflow: hidden;
+}</style>
+</head>
+<body>
+<div class="slide flex flex-col p-12" style=" overflow: hidden;">
+<!-- Background Elements -->
+<div class="absolute inset-0 overflow-hidden">
+<div class="geometric rounded-full bg-purple-500 w-96 h-96 -bottom-20 -right-20"></div>
+<div class="geometric rounded-full bg-orange-400 w-64 h-64 top-20 -left-20"></div>
+<div class="geometric rounded-full bg-teal-400 w-80 h-80 -top-40 right-40"></div>
+</div>
+<!-- Content Container -->
+<div class="z-10 flex flex-col h-full">
+<!-- Header -->
+<div class="mb-6">
+<h1 class="text-5xl font-bold mb-4 title-glow">AI for Accessibility</h1>
+<p class="text-xl text-gray-200">Breaking barriers and creating an inclusive world</p>
+</div>
+<!-- Main Content -->
+<div class="flex flex-col gap-6">
+<!-- Introduction -->
+<div class="bg-black bg-opacity-20 p-4 rounded-lg">
+<p class="text-lg">AI technologies are transforming accessibility, empowering individuals with disabilities and breaking down barriers to communication and participation.</p>
+</div>
+<!-- Accessibility Applications -->
+<div class="grid grid-cols-2 gap-6">
+<!-- Be My Eyes -->
+<div class="accessibility-card p-6">
+<div class="flex items-start mb-4">
+<div class="icon-container bg-purple-600 mr-4">
+<i class="fas fa-eye text-3xl text-white"></i>
+</div>
+<div>
+<h2 class="text-2xl font-semibold text-orange-200">Be My Eyes</h2>
+<p class="text-gray-300">Connecting blind and low-vision individuals with volunteers</p>
+</div>
+</div>
+<ul class="space-y-2 mt-4">
+<li class="benefit-item flex items-center">
+<i class="fas fa-check-circle text-teal-300 mr-2"></i>
+<span>AI-powered tools help with daily tasks</span>
+</li>
+<li class="benefit-item flex items-center">
+<i class="fas fa-check-circle text-teal-300 mr-2"></i>
+<span>Human-AI collaboration enhances capabilities</span>
+</li>
+</ul>
+</div>
+<!-- Real-time Services -->
+<div class="accessibility-card p-6">
+<div class="flex items-start mb-4">
+<div class="icon-container bg-orange-500 mr-4">
+<i class="fas fa-comment-dots text-3xl text-white"></i>
+</div>
+<div>
+<h2 class="text-2xl font-semibold text-teal-200">Real-time Communication</h2>
+<p class="text-gray-300">Breaking down barriers for the deaf and hard of hearing</p>
+</div>
+</div>
+<ul class="space-y-2 mt-4">
+<li class="benefit-item flex items-center">
+<i class="fas fa-check-circle text-purple-300 mr-2"></i>
+<span>Live transcription services convert speech to text</span>
+</li>
+<li class="benefit-item flex items-center">
+<i class="fas fa-check-circle text-purple-300 mr-2"></i>
+<span>Translation services bridge language barriers</span>
+</li>
+</ul>
+</div>
+</div>
+<!-- Impact Section -->
+<div class="mt-4">
+<h3 class="text-xl font-semibold mb-3 text-orange-200">Impact &amp; Potential</h3>
+<div class="grid grid-cols-3 gap-4">
+<div class="benefit-item flex items-center">
+<i class="fas fa-universal-access text-2xl text-teal-300 mr-3"></i>
+<p>Increasing digital accessibility</p>
+</div>
+<div class="benefit-item flex items-center">
+<i class="fas fa-users text-2xl text-orange-300 mr-3"></i>
+<p>Facilitating social inclusion</p>
+</div>
+<div class="benefit-item flex items-center">
+<i class="fas fa-graduation-cap text-2xl text-purple-300 mr-3"></i>
+<p>Expanding educational opportunities</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Quote -->
+<div class="mt-auto bg-black bg-opacity-30 p-4 rounded-lg text-center">
+<p class="text-lg italic text-gray-200">&#34;AI has the potential to empower and include, transforming how we interact and participate in society.&#34;</p>
+</div>
+<!-- Page Number -->
+<div class="absolute bottom-4 right-6 text-sm text-gray-300" style="visibility: hidden;">
+                14/19
+            </div>
+</div>
+</div>
+
+</body></html>

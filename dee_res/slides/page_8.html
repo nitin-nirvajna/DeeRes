@@ -1,0 +1,139 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Lessons from the Past</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        body {width: 1280px; min-height: 720px; overflow: hidden; margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background: linear-gradient(135deg, #2b1055 0%, #7597de 100%);
+            color: white;
+        }
+        .geometric {
+            position: absolute;
+            opacity: 0.1;
+        }
+        .title-glow {
+            text-shadow: 0 0 15px rgba(255, 127, 80, 0.7);
+        }
+        .lesson-card {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .lesson-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .arrow-path {
+            position: relative;
+            height: 4px;
+            background: linear-gradient(90deg, #8A4FFF, #20B2AA);
+            margin: 30px 0;
+        }
+        .arrow-head {
+            width: 0;
+            height: 0;
+            border-top: 10px solid transparent;
+            border-bottom: 10px solid transparent;
+            border-left: 15px solid #20B2AA;
+            position: absolute;
+            right: -5px;
+            top: -8px;
+        }
+        .timeline-point {
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            position: absolute;
+            top: -4px;
+            transform: translateX(-50%);
+        }
+    
+html {
+    overflow: hidden;
+}</style>
+</head>
+<body>
+<div class="slide flex flex-col p-12" style=" overflow: hidden;">
+<!-- Background Elements -->
+<div class="absolute inset-0 overflow-hidden">
+<div class="geometric rounded-full bg-purple-500 w-96 h-96 -bottom-20 -right-20"></div>
+<div class="geometric rounded-full bg-orange-400 w-64 h-64 top-20 -left-20"></div>
+<div class="geometric rounded-full bg-teal-400 w-80 h-80 -top-40 right-40"></div>
+</div>
+<!-- Content Container -->
+<div class="z-10 flex flex-col h-full">
+<!-- Header -->
+<div class="mb-4">
+<h1 class="text-5xl font-bold mb-4 title-glow">Lessons from the Past</h1>
+<p class="text-xl text-gray-200">How AI winters shaped the foundation for modern artificial intelligence</p>
+</div>
+<!-- Evolution Path -->
+<div class="arrow-path mt-6 mb-8">
+<div class="timeline-point" style="left: 10%; background-color: #8A4FFF;"></div>
+<div class="timeline-point" style="left: 40%; background-color: #FF7F50;"></div>
+<div class="timeline-point" style="left: 70%; background-color: #FF6B6B;"></div>
+<div class="timeline-point" style="left: 95%; background-color: #20B2AA;"></div>
+<div class="arrow-head"></div>
+</div>
+<!-- Lessons Grid -->
+<div class="grid grid-cols-2 gap-6 mt-2">
+<!-- Lesson 1 -->
+<div class="lesson-card p-5 flex items-start">
+<div class="bg-purple-700 bg-opacity-50 p-3 rounded-full mr-4">
+<i class="fas fa-hourglass-half text-2xl text-purple-300"></i>
+</div>
+<div>
+<h3 class="text-xl font-semibold mb-2 text-purple-200">Patience as a Marathon</h3>
+<p class="text-gray-200">Building intelligence is a marathon, not a sprint. Progress requires years of dedicated research and incremental improvements.</p>
+</div>
+</div>
+<!-- Lesson 2 -->
+<div class="lesson-card p-5 flex items-start">
+<div class="bg-orange-700 bg-opacity-50 p-3 rounded-full mr-4">
+<i class="fas fa-microscope text-2xl text-orange-300"></i>
+</div>
+<div>
+<h3 class="text-xl font-semibold mb-2 text-orange-200">Rigorous Scientific Methods</h3>
+<p class="text-gray-200">More robust theoretical foundations were developed, moving from optimistic speculation to mathematically-grounded approaches.</p>
+</div>
+</div>
+<!-- Lesson 3 -->
+<div class="lesson-card p-5 flex items-start">
+<div class="bg-red-700 bg-opacity-50 p-3 rounded-full mr-4">
+<i class="fas fa-exclamation-triangle text-2xl text-red-300"></i>
+</div>
+<div>
+<h3 class="text-xl font-semibold mb-2 text-red-200">Humility in Complexity</h3>
+<p class="text-gray-200">The winters taught researchers to acknowledge the immense complexity of creating true intelligence and to approach problems with humility.</p>
+</div>
+</div>
+<!-- Lesson 4 -->
+<div class="lesson-card p-5 flex items-start">
+<div class="bg-teal-700 bg-opacity-50 p-3 rounded-full mr-4">
+<i class="fas fa-brain text-2xl text-teal-300"></i>
+</div>
+<div>
+<h3 class="text-xl font-semibold mb-2 text-teal-200">Machine Learning Emergence</h3>
+<p class="text-gray-200">The seeds of persistence planted during these winters gave rise to machine learning approaches that would later transform the field.</p>
+</div>
+</div>
+</div>
+<!-- Bottom Quote -->
+<div class="mt-auto bg-black bg-opacity-30 p-4 rounded-lg text-center">
+<p class="text-lg italic text-gray-200">&#34;The lessons learned from these early decades were profound. The AI Winters, though challenging, forced the field to mature.&#34;</p>
+</div>
+<!-- Page Number -->
+<div class="absolute bottom-4 right-6 text-sm text-gray-300" style="visibility: hidden;">
+                8/19
+            </div>
+</div>
+</div>
+
+</body></html>

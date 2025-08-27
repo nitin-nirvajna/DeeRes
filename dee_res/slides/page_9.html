@@ -1,0 +1,139 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>AI in Our World Today</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        body {width: 1280px; min-height: 720px; overflow: hidden; margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background: linear-gradient(135deg, #2b1055 0%, #7597de 100%);
+            color: white;
+        }
+        .geometric {
+            position: absolute;
+            opacity: 0.1;
+        }
+        .title-glow {
+            text-shadow: 0 0 15px rgba(255, 127, 80, 0.7);
+        }
+        .card {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .divider {
+            height: 3px;
+            background: linear-gradient(90deg, rgba(138, 79, 255, 0.3), rgba(255, 127, 80, 0.9), rgba(32, 178, 170, 0.3));
+        }
+        .icon-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .next-slides {
+            background-color: rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+            border-left: 4px solid #FF7F50;
+        }
+    
+html {
+    overflow: hidden;
+}</style>
+</head>
+<body>
+<div class="slide flex flex-col p-12" style=" overflow: hidden;">
+<!-- Background Elements -->
+<div class="absolute inset-0 overflow-hidden">
+<div class="geometric rounded-full bg-purple-500 w-96 h-96 -bottom-20 -right-20"></div>
+<div class="geometric rounded-full bg-orange-400 w-64 h-64 top-20 -left-20"></div>
+<div class="geometric rounded-full bg-teal-400 w-80 h-80 -top-40 right-40"></div>
+</div>
+<!-- Content Container -->
+<div class="z-10 flex flex-col h-full">
+<!-- Header -->
+<div class="mb-6">
+<h1 class="text-5xl font-bold mb-4 title-glow">AI in Our World Today</h1>
+<p class="text-xl text-gray-200">From research labs to everyday life</p>
+</div>
+<!-- Divider -->
+<div class="divider my-6"></div>
+<!-- Main Content -->
+<div class="flex flex-col flex-grow">
+<!-- Introduction -->
+<div class="mb-8">
+<p class="text-xl text-center">AI is no longer confined to research labs; it&#39;s in your pocket, on your screen, and all around you.</p>
+</div>
+<!-- AI in Daily Life Grid -->
+<div class="grid grid-cols-3 gap-6 mb-8">
+<!-- Personalized Recommendations -->
+<div class="card p-5 flex flex-col items-center text-center">
+<div class="icon-circle bg-purple-800 bg-opacity-50">
+<i class="fas fa-thumbs-up text-3xl text-purple-300"></i>
+</div>
+<h3 class="text-xl font-semibold mb-2">Personalized Recommendations</h3>
+<p class="text-gray-300">Netflix suggests movies and Spotify creates playlists based on your preferences</p>
+</div>
+<!-- Smart Assistants -->
+<div class="card p-5 flex flex-col items-center text-center">
+<div class="icon-circle bg-orange-800 bg-opacity-50">
+<i class="fas fa-microphone-alt text-3xl text-orange-300"></i>
+</div>
+<h3 class="text-xl font-semibold mb-2">Smart Assistants</h3>
+<p class="text-gray-300">Siri and Alexa use NLP to understand and respond to your commands</p>
+</div>
+<!-- Navigation -->
+<div class="card p-5 flex flex-col items-center text-center">
+<div class="icon-circle bg-teal-800 bg-opacity-50">
+<i class="fas fa-map-marked-alt text-3xl text-teal-300"></i>
+</div>
+<h3 class="text-xl font-semibold mb-2">Navigation &amp; Mapping</h3>
+<p class="text-gray-300">Google Maps and Waze analyze traffic data to provide real-time directions</p>
+</div>
+</div>
+<!-- Next Slides Preview -->
+<div class="next-slides p-5 mt-auto">
+<h3 class="text-xl font-semibold mb-3 flex items-center">
+<i class="fas fa-arrow-right text-orange-400 mr-2"></i>
+                        Next We&#39;ll Explore
+                    </h3>
+<div class="grid grid-cols-4 gap-4">
+<div class="flex items-center">
+<i class="fas fa-mobile-alt text-purple-300 mr-2"></i>
+<p>Everyday AI Applications</p>
+</div>
+<div class="flex items-center">
+<i class="fas fa-brain text-orange-300 mr-2"></i>
+<p>Machine Learning Basics</p>
+</div>
+<div class="flex items-center">
+<i class="fas fa-balance-scale text-teal-300 mr-2"></i>
+<p>Ethical Considerations</p>
+</div>
+<div class="flex items-center">
+<i class="fas fa-flask text-pink-300 mr-2"></i>
+<p>Cutting-Edge Research</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Page Number -->
+<div class="absolute bottom-4 right-6 text-sm text-gray-300" style="visibility: hidden;">
+                9/19
+            </div>
+</div>
+</div>
+
+</body></html>

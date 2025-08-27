@@ -1,0 +1,170 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>The AI Winters</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        body {width: 1282px; min-height: 720px; overflow: hidden; margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background: linear-gradient(135deg, #2b1055 0%, #7597de 100%);
+            color: white;
+        }
+        .geometric {
+            position: absolute;
+            opacity: 0.1;
+        }
+        .title-glow {
+            text-shadow: 0 0 15px rgba(255, 127, 80, 0.7);
+        }
+        .winter-card {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .winter-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .timeline {
+            height: 8px;
+            background: linear-gradient(90deg, #8A4FFF, #FF7F50, #20B2AA);
+            position: relative;
+            margin: 40px 0;
+        }
+        .timeline-point {
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            position: absolute;
+            top: -4px;
+            transform: translateX(-50%);
+            box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        }
+        .timeline-label {
+            position: absolute;
+            top: -30px;
+            transform: translateX(-50%);
+            text-align: center;
+            width: 100px;
+        }
+        .timeline-winter {
+            position: absolute;
+            height: 20px;
+            background-color: rgba(255, 107, 107, 0.5);
+            border-radius: 4px;
+        }
+    
+html {
+    overflow: hidden;
+}</style>
+</head>
+<body>
+<div class="slide flex flex-col p-12" style=" overflow: hidden;">
+<!-- Background Elements -->
+<div class="absolute inset-0 overflow-hidden">
+<div class="geometric rounded-full bg-purple-500 w-96 h-96 -bottom-20 -right-20"></div>
+<div class="geometric rounded-full bg-orange-400 w-64 h-64 top-20 -left-20"></div>
+<div class="geometric rounded-full bg-teal-400 w-80 h-80 -top-40 right-40"></div>
+</div>
+<!-- Content Container -->
+<div class="z-10 flex flex-col h-full">
+<!-- Header -->
+<div class="mb-6">
+<h1 class="text-5xl font-bold mb-4 title-glow">The AI Winters</h1>
+<p class="text-xl text-gray-200">Periods of reduced funding and interest when AI progress stalled</p>
+</div>
+<!-- Timeline -->
+<div class="timeline my-6">
+<!-- First Winter -->
+<div class="timeline-winter" style="left: 16.7%; width: 14%;"></div>
+<div class="timeline-point" style="left: 16.7%; background-color: #FF6B6B;"></div>
+<div class="timeline-label" style="left: 16.7%;">
+<span class="font-bold">1974</span>
+</div>
+<div class="timeline-point" style="left: 30.7%; background-color: #FF6B6B;"></div>
+<div class="timeline-label" style="left: 30.7%;">
+<span class="font-bold">1980</span>
+</div>
+<!-- Second Winter -->
+<div class="timeline-winter" style="left: 58.3%; width: 14%;"></div>
+<div class="timeline-point" style="left: 58.3%; background-color: #FF6B6B;"></div>
+<div class="timeline-label" style="left: 58.3%;">
+<span class="font-bold">1987</span>
+</div>
+<div class="timeline-point" style="left: 72.3%; background-color: #FF6B6B;"></div>
+<div class="timeline-label" style="left: 72.3%;">
+<span class="font-bold">1993</span>
+</div>
+<!-- Current -->
+<div class="timeline-point" style="left: 100%; background-color: #20B2AA;"></div>
+<div class="timeline-label" style="left: 100%;">
+<span class="font-bold">Present</span>
+</div>
+</div>
+<!-- Winter Details -->
+<div class="flex justify-between gap-6 mt-4">
+<!-- First Winter -->
+<div class="winter-card p-6 flex-1">
+<div class="flex items-center mb-4">
+<i class="fas fa-snowflake text-3xl text-cyan-300 mr-3"></i>
+<h2 class="text-2xl font-semibold">First AI Winter (1974-1980)</h2>
+</div>
+<div class="mb-4">
+<h3 class="text-lg font-semibold text-orange-200 mb-2">Causes:</h3>
+<ul class="list-disc list-inside text-gray-200 space-y-2 ml-2">
+<li>Researchers overpromised on what AI could deliver</li>
+<li>Computational power needed for complex tasks was unavailable</li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold text-orange-200 mb-2">Impact:</h3>
+<p class="text-gray-200">Government agencies in the U.S. and U.K. cut funding for undirected AI research, leading to a significant slowdown in the field.</p>
+</div>
+</div>
+<!-- Second Winter -->
+<div class="winter-card p-6 flex-1">
+<div class="flex items-center mb-4">
+<i class="fas fa-snowflake text-3xl text-cyan-300 mr-3"></i>
+<h2 class="text-2xl font-semibold">Second AI Winter (1987-1993)</h2>
+</div>
+<div class="mb-4">
+<h3 class="text-lg font-semibold text-orange-200 mb-2">Causes:</h3>
+<ul class="list-disc list-inside text-gray-200 space-y-2 ml-2">
+<li>Collapse of market for specialized AI hardware</li>
+<li>Expert systems proved brittle outside narrow expertise</li>
+</ul>
+</div>
+<div>
+<h3 class="text-lg font-semibold text-orange-200 mb-2">Impact:</h3>
+<p class="text-gray-200">Cheaper and more powerful desktop computers began to dominate the market, making specialized AI machines obsolete.</p>
+</div>
+</div>
+</div>
+<!-- Key Takeaways -->
+<div class="mt-auto">
+<h3 class="text-xl font-semibold mb-2 text-orange-200">Key Takeaways:</h3>
+<div class="grid grid-cols-2 gap-4">
+<div class="flex items-start">
+<i class="fas fa-lightbulb text-yellow-300 mt-1 mr-3"></i>
+<p class="text-gray-200">AI Winters were critical reality checks that exposed the limitations of existing approaches</p>
+</div>
+<div class="flex items-start">
+<i class="fas fa-chess-queen text-yellow-300 mt-1 mr-3"></i>
+<p class="text-gray-200">These periods forced the field to mature and develop more rigorous approaches</p>
+</div>
+</div>
+</div>
+<!-- Page Number -->
+<div class="absolute bottom-4 right-6 text-sm text-gray-300" style="visibility: hidden;">
+                7/19
+            </div>
+</div>
+</div>
+
+</body></html>

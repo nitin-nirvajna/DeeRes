@@ -1,0 +1,119 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ethical Considerations</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        body {width: 1280px; min-height: 742px; overflow: hidden; margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            min-height: 742px;
+            position: relative;
+            background: linear-gradient(135deg, #2b1055 0%, #7597de 100%);
+            color: white;
+        }
+        .geometric {
+            position: absolute;
+            opacity: 0.1;
+        }
+        .title-glow {
+            text-shadow: 0 0 15px rgba(255, 127, 80, 0.7);
+        }
+        .ethics-card {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .ethics-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .icon-container {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 16px;
+        }
+    
+html {
+    overflow: hidden;
+}</style>
+</head>
+<body>
+<div class="slide flex flex-col p-12" style=" overflow: hidden;">
+<!-- Background Elements -->
+<div class="absolute inset-0 overflow-hidden">
+<div class="geometric rounded-full bg-purple-500 w-96 h-96 -bottom-20 -right-20"></div>
+<div class="geometric rounded-full bg-orange-400 w-64 h-64 top-20 -left-20"></div>
+<div class="geometric rounded-full bg-teal-400 w-80 h-80 -top-40 right-40"></div>
+</div>
+<!-- Content Container -->
+<div class="z-10 flex flex-col h-full">
+<!-- Header -->
+<div class="mb-6">
+<h1 class="text-5xl font-bold mb-4 title-glow">Ethical Considerations</h1>
+<p class="text-xl text-gray-200">Addressing the human dimensions of artificial intelligence</p>
+</div>
+<!-- Main Content -->
+<div class="grid grid-cols-3 gap-8 mt-4 flex-grow">
+<!-- Algorithmic Bias -->
+<div class="ethics-card p-6 flex flex-col">
+<div class="icon-container bg-purple-700 self-center">
+<i class="fas fa-balance-scale text-4xl text-purple-300"></i>
+</div>
+<h2 class="text-2xl font-semibold text-center mb-4">Algorithmic Bias</h2>
+<div class="flex-grow">
+<p class="text-gray-200 mb-3">AI systems learn from the data they&#39;re given.</p>
+<div class="bg-black bg-opacity-20 p-3 rounded-lg">
+<p class="text-gray-100"><i class="fas fa-exclamation-triangle text-yellow-400 mr-2"></i> If this data reflects existing societal biases (e.g., in hiring or loan data), the AI can learn and amplify these prejudices.</p>
+</div>
+<p class="text-gray-200 mt-3">This leads to unfair outcomes that perpetuate inequality.</p>
+</div>
+</div>
+<!-- Privacy and Data Security -->
+<div class="ethics-card p-6 flex flex-col">
+<div class="icon-container bg-orange-700 self-center">
+<i class="fas fa-shield-alt text-4xl text-orange-300"></i>
+</div>
+<h2 class="text-2xl font-semibold text-center mb-4">Privacy &amp; Data Security</h2>
+<div class="flex-grow">
+<p class="text-gray-200 mb-3">AI models require massive amounts of personal data.</p>
+<div class="bg-black bg-opacity-20 p-3 rounded-lg">
+<p class="text-gray-100"><i class="fas fa-user-secret text-orange-400 mr-2"></i> Who has access to our data and how it&#39;s used raises significant concerns.</p>
+</div>
+<p class="text-gray-200 mt-3">Questions about data ownership and protection from misuse become critical.</p>
+</div>
+</div>
+<!-- Misinformation and Deepfakes -->
+<div class="ethics-card p-6 flex flex-col">
+<div class="icon-container bg-teal-700 self-center">
+<i class="fas fa-mask text-4xl text-teal-300"></i>
+</div>
+<h2 class="text-2xl font-semibold text-center mb-4">Misinformation &amp; Deepfakes</h2>
+<div class="flex-grow">
+<p class="text-gray-200 mb-3">Generative AI can create highly realistic but fake content.</p>
+<div class="bg-black bg-opacity-20 p-3 rounded-lg">
+<p class="text-gray-100"><i class="fas fa-image text-teal-400 mr-2"></i> &#34;Deepfakes&#34; enable the creation of convincing fake images, videos, and audio.</p>
+</div>
+<p class="text-gray-200 mt-3">This poses a serious threat by enabling rapid spread of convincing misinformation and propaganda.</p>
+</div>
+</div>
+</div>
+<!-- Bottom Quote -->
+<div class="mt-8 text-center">
+<p class="text-lg italic text-gray-300">&#34;Ethics is about building AI that reflects our values and benefits society.&#34;</p>
+</div>
+<!-- Page Number -->
+<div class="absolute bottom-4 right-6 text-sm text-gray-300" style="visibility: hidden;">
+                12/19
+            </div>
+</div>
+</div>
+
+</body></html>

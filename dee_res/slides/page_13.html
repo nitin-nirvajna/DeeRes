@@ -1,0 +1,185 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cutting-Edge Research Today</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://d3js.org/d3.v7.min.js"></script>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        body {width: 1280px; min-height: 780px; overflow: hidden; margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            min-height: 780px;
+            position: relative;
+            background: linear-gradient(135deg, #2b1055 0%, #7597de 100%);
+            color: white;
+        }
+        .geometric {
+            position: absolute;
+            opacity: 0.1;
+        }
+        .title-glow {
+            text-shadow: 0 0 15px rgba(255, 127, 80, 0.7);
+        }
+        .project-card {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .project-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .highlight-box {
+            background-color: rgba(138, 79, 255, 0.2);
+            border-left: 4px solid #8A4FFF;
+            padding: 10px 15px;
+            border-radius: 0 5px 5px 0;
+        }
+        .molecule-image {
+            border-radius: 10px;
+            box-shadow: 0 0 20px rgba(255, 127, 80, 0.5);
+        }
+    
+html {
+    overflow: hidden;
+}</style>
+</head>
+<body>
+<div class="slide flex flex-col p-12" style=" overflow: hidden;">
+<!-- Background Elements -->
+<div class="absolute inset-0 overflow-hidden">
+<div class="geometric rounded-full bg-purple-500 w-96 h-96 -bottom-20 -right-20"></div>
+<div class="geometric rounded-full bg-orange-400 w-64 h-64 top-20 -left-20"></div>
+<div class="geometric rounded-full bg-teal-400 w-80 h-80 -top-40 right-40"></div>
+</div>
+<!-- Content Container -->
+<div class="z-10 flex flex-col h-full">
+<!-- Header -->
+<div class="mb-6">
+<h1 class="text-5xl font-bold mb-4 title-glow">Cutting-Edge Research Today</h1>
+<p class="text-xl text-gray-200">Revolutionary AI projects pushing the boundaries of science</p>
+</div>
+<!-- Projects Section -->
+<div class="flex gap-6 h-full">
+<!-- AlphaFold Project -->
+<div class="project-card p-6 flex-1 flex flex-col">
+<div class="flex items-center mb-4">
+<i class="fas fa-dna text-3xl text-purple-300 mr-3"></i>
+<h2 class="text-2xl font-semibold">DeepMind&#39;s AlphaFold</h2>
+</div>
+<div class="flex-1 flex flex-col">
+<p class="mb-4 text-gray-200">A milestone in computational biology that solves the <span class="text-orange-300 font-semibold">protein folding problem</span> — predicting 3D structure from amino acid sequences.</p>
+<div class="highlight-box mb-4">
+<p class="text-gray-200">For decades, predicting protein 3D structures was a grand challenge in biology.</p>
+</div>
+<div class="flex-1 flex items-center justify-center">
+<img alt="3D molecular model" class="molecule-image max-h-52 object-cover" src="https://picture-search.skywork.ai/aippt/image/sheet/d92f4a746b30800eee5decd76c26b1fb.jpg" data-sk-source-container="img" data-sk-source-url="https://time.com/6975934/google-deepmind-alphafold-3-ai/" data-sk-source-id="1959817260560461834"/>
+</div>
+<div class="mt-4">
+<p class="text-teal-300 font-semibold">Impact:</p>
+<ul class="list-disc list-inside text-gray-200 ml-2">
+<li>Enables understanding of disease mechanisms</li>
+<li>Accelerates drug discovery</li>
+<li>Creates new possibilities in personalized medicine</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- GNoME Project -->
+<div class="project-card p-6 flex-1 flex flex-col">
+<div class="flex items-center mb-4">
+<i class="fas fa-atom text-3xl text-teal-300 mr-3"></i>
+<h2 class="text-2xl font-semibold">Google DeepMind&#39;s GNoME</h2>
+</div>
+<div class="flex-1 flex flex-col">
+<p class="mb-4 text-gray-200"><span class="text-teal-300 font-semibold">Graph Networks for Materials Exploration</span> discovers new crystal structures using AI-driven methods.</p>
+<div class="highlight-box mb-4">
+<p class="text-gray-200">Leverages graph neural networks to explore complex material properties.</p>
+</div>
+<div class="flex-1 flex items-center justify-center">
+<div class="w-full h-52" id="discovery-visualization"></div>
+</div>
+<div class="mt-4">
+<p class="text-orange-300 font-semibold">Discoveries:</p>
+<ul class="list-disc list-inside text-gray-200 ml-2">
+<li><span class="font-semibold">2.2 million</span> new crystal structures</li>
+<li><span class="font-semibold">380,000</span> stable materials for future tech</li>
+<li>Materials for batteries, solar cells, and superconductors</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Page Number -->
+<div class="absolute bottom-4 right-6 text-sm text-gray-300" style="visibility: hidden;">
+                13/19
+            </div>
+</div>
+</div>
+<script>
+        // D3.js visualization for GNoME discoveries
+        document.addEventListener('DOMContentLoaded', function() {
+            const width = document.getElementById('discovery-visualization').clientWidth;
+            const height = document.getElementById('discovery-visualization').clientHeight;
+            
+            const svg = d3.select('#discovery-visualization')
+                .append('svg')
+                .attr('width', width)
+                .attr('height', height);
+            
+            // Create a simple visualization representing the discoveries
+            const materialTypes = [
+                { type: 'Battery Materials', value: 120000, color: '#FF7F50' },
+                { type: 'Solar Cell Materials', value: 100000, color: '#20B2AA' },
+                { type: 'Superconductors', value: 60000, color: '#8A4FFF' },
+                { type: 'Other Stable Materials', value: 100000, color: '#7597de' }
+            ];
+            
+            const totalMaterials = materialTypes.reduce((sum, d) => sum + d.value, 0);
+            const radius = Math.min(width, height) / 2 - 20;
+            
+            const pie = d3.pie()
+                .value(d => d.value)
+                .sort(null);
+            
+            const arc = d3.arc()
+                .innerRadius(radius * 0.5)
+                .outerRadius(radius);
+            
+            const g = svg.append('g')
+                .attr('transform', `translate(${width/2}, ${height/2})`);
+            
+            // Add arcs
+            const arcs = g.selectAll('.arc')
+                .data(pie(materialTypes))
+                .enter()
+                .append('g')
+                .attr('class', 'arc');
+            
+            arcs.append('path')
+                .attr('d', arc)
+                .attr('fill', d => d.data.color)
+                .attr('stroke', '#2b1055')
+                .attr('stroke-width', 1)
+                .style('opacity', 0.8);
+            
+            // Add text in the center
+            g.append('text')
+                .attr('text-anchor', 'middle')
+                .attr('dy', '0.35em')
+                .attr('fill', 'white')
+                .style('font-size', '14px')
+                .text('380,000+');
+            
+            g.append('text')
+                .attr('text-anchor', 'middle')
+                .attr('dy', '2em')
+                .attr('fill', 'white')
+                .style('font-size', '12px')
+                .text('Stable Materials');
+        });
+    </script>
+
+</body></html>

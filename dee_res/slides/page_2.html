@@ -1,0 +1,138 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Our Journey Through Intelligence</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        body {width: 1280px; min-height: 720px; overflow: hidden; margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background: linear-gradient(135deg, #2b1055 0%, #7597de 100%);
+            color: white;
+        }
+        .geometric {
+            position: absolute;
+            opacity: 0.1;
+        }
+        .title-glow {
+            text-shadow: 0 0 15px rgba(255, 127, 80, 0.7);
+        }
+        .journey-line {
+            height: 4px;
+            background: linear-gradient(90deg, #8A4FFF, #FF7F50, #20B2AA);
+            position: relative;
+            margin: 40px 0;
+        }
+        .journey-point {
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            position: absolute;
+            top: -8px;
+            transform: translateX(-50%);
+            box-shadow: 0 0 15px rgba(255, 255, 255, 0.7);
+        }
+        .section-card {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .section-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+    
+html {
+    overflow: hidden;
+}</style>
+</head>
+<body>
+<div class="slide flex flex-col p-12" style=" overflow: hidden;">
+<!-- Background Elements -->
+<div class="absolute inset-0 overflow-hidden">
+<div class="geometric rounded-full bg-purple-500 w-96 h-96 -bottom-20 -right-20"></div>
+<div class="geometric rounded-full bg-orange-400 w-64 h-64 top-20 -left-20"></div>
+<div class="geometric rounded-full bg-teal-400 w-80 h-80 -top-40 right-40"></div>
+</div>
+<!-- Content Container -->
+<div class="z-10 flex flex-col h-full">
+<!-- Header -->
+<div class="mb-6">
+<h1 class="text-5xl font-bold mb-4 title-glow">Our Journey Through Intelligence</h1>
+<p class="text-xl text-gray-200">Exploring the origins, applications, and future of artificial intelligence</p>
+</div>
+<!-- Journey Timeline -->
+<div class="journey-line my-8">
+<div class="journey-point" style="left: 16.7%; background-color: #8A4FFF;"></div>
+<div class="journey-point" style="left: 50%; background-color: #FF7F50;"></div>
+<div class="journey-point" style="left: 83.3%; background-color: #20B2AA;"></div>
+</div>
+<!-- Journey Sections -->
+<div class="flex justify-between gap-6 mt-4">
+<!-- Past Section -->
+<div class="section-card p-6 flex-1">
+<div class="flex items-center mb-4">
+<i class="fas fa-history text-3xl text-purple-300 mr-3"></i>
+<h2 class="text-2xl font-semibold">The Past</h2>
+</div>
+<ul class="list-disc list-inside text-gray-200 space-y-2 ml-2">
+<li>AI&#39;s core concept and foundations</li>
+<li>Historical milestones</li>
+<li>The challenges of early AI</li>
+</ul>
+</div>
+<!-- Present Section -->
+<div class="section-card p-6 flex-1">
+<div class="flex items-center mb-4">
+<i class="fas fa-laptop text-3xl text-orange-300 mr-3"></i>
+<h2 class="text-2xl font-semibold">The Present</h2>
+</div>
+<ul class="list-disc list-inside text-gray-200 space-y-2 ml-2">
+<li>Everyday AI applications</li>
+<li>Machine learning basics</li>
+<li>Ethical considerations</li>
+</ul>
+</div>
+<!-- Future Section -->
+<div class="section-card p-6 flex-1">
+<div class="flex items-center mb-4">
+<i class="fas fa-rocket text-3xl text-teal-300 mr-3"></i>
+<h2 class="text-2xl font-semibold">The Future</h2>
+</div>
+<ul class="list-disc list-inside text-gray-200 space-y-2 ml-2">
+<li>Emerging AI trends</li>
+<li>Transformative projects</li>
+<li>Your role in shaping AI</li>
+</ul>
+</div>
+</div>
+<!-- Key Questions -->
+<div class="mt-auto">
+<h3 class="text-xl font-semibold mb-2 text-orange-200">Key Questions We&#39;ll Explore:</h3>
+<div class="grid grid-cols-3 gap-4">
+<div class="flex items-center">
+<i class="fas fa-question-circle text-purple-300 mr-2"></i>
+<p>How did AI begin and what are its foundations?</p>
+</div>
+<div class="flex items-center">
+<i class="fas fa-question-circle text-orange-300 mr-2"></i>
+<p>How does AI work in our daily lives?</p>
+</div>
+<div class="flex items-center">
+<i class="fas fa-question-circle text-teal-300 mr-2"></i>
+<p>What possibilities and responsibilities does AI create?</p>
+</div>
+</div>
+</div>
+<!-- Page Number -->
+<div class="absolute bottom-4 right-6 text-sm text-gray-300" style="visibility: hidden;">
+                2/19
+            </div>
+</div>
+</div>
+
+</body></html>

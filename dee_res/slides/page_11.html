@@ -1,0 +1,193 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Machine Learning Simplified</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        body {width: 1280px; min-height: 741px; overflow: hidden; margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            min-height: 741px;
+            position: relative;
+            background: linear-gradient(135deg, #2b1055 0%, #7597de 100%);
+            color: white;
+        }
+        .geometric {
+            position: absolute;
+            opacity: 0.1;
+        }
+        .title-glow {
+            text-shadow: 0 0 15px rgba(255, 127, 80, 0.7);
+        }
+        .comparison-card {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .comparison-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .vs-circle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #FF7F50, #8A4FFF);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            font-size: 24px;
+            box-shadow: 0 0 15px rgba(255, 127, 80, 0.7);
+        }
+        .feature-item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 12px;
+        }
+        .octagon {
+            width: 80px;
+            height: 80px;
+            background-color: red;
+            clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+            font-size: 14px;
+            margin: 0 auto;
+        }
+        .image-label {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin: 0 8px;
+        }
+        .image-container {
+            width: 60px;
+            height: 60px;
+            border-radius: 5px;
+            background-color: rgba(255, 255, 255, 0.2);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 5px;
+        }
+    
+html {
+    overflow: hidden;
+}</style>
+</head>
+<body>
+<div class="slide flex flex-col p-12" style=" overflow: hidden;">
+<!-- Background Elements -->
+<div class="absolute inset-0 overflow-hidden">
+<div class="geometric rounded-full bg-purple-500 w-96 h-96 -bottom-20 -right-20"></div>
+<div class="geometric rounded-full bg-orange-400 w-64 h-64 top-20 -left-20"></div>
+<div class="geometric rounded-full bg-teal-400 w-80 h-80 -top-40 right-40"></div>
+</div>
+<!-- Content Container -->
+<div class="z-10 flex flex-col h-full">
+<!-- Header -->
+<div class="mb-6">
+<h1 class="text-5xl font-bold mb-4 title-glow">Machine Learning Simplified</h1>
+<p class="text-xl text-gray-200">The difference between traditional programming and learning from examples</p>
+</div>
+<!-- Main Comparison -->
+<div class="flex flex-1 gap-8 items-center">
+<!-- Traditional Programming -->
+<div class="comparison-card p-6 flex-1">
+<div class="flex items-center mb-5">
+<i class="fas fa-code text-3xl text-purple-300 mr-3"></i>
+<h2 class="text-2xl font-semibold">Traditional Programming</h2>
+</div>
+<div class="octagon mb-4">STOP</div>
+<div class="bg-black bg-opacity-30 p-4 rounded-lg mb-4">
+<p class="text-gray-200">
+<i class="fas fa-quote-left text-purple-300 opacity-50 mr-1"></i>
+                            If shape is octagon AND color is red AND contains &#34;STOP&#34;, then it&#39;s a stop sign.
+                            <i class="fas fa-quote-right text-purple-300 opacity-50 ml-1"></i>
+</p>
+</div>
+<h3 class="text-lg font-semibold mb-2 text-orange-200">Limitations:</h3>
+<div class="feature-item">
+<i class="fas fa-times-circle text-red-400 mr-2"></i>
+<p>Fails when sign is faded or at an angle</p>
+</div>
+<div class="feature-item">
+<i class="fas fa-times-circle text-red-400 mr-2"></i>
+<p>Must be explicitly told what to look for</p>
+</div>
+<div class="feature-item">
+<i class="fas fa-times-circle text-red-400 mr-2"></i>
+<p>Cannot adapt to new situations</p>
+</div>
+</div>
+<!-- VS Circle -->
+<div class="vs-circle z-20">VS</div>
+<!-- Machine Learning -->
+<div class="comparison-card p-6 flex-1">
+<div class="flex items-center mb-5">
+<i class="fas fa-brain text-3xl text-teal-300 mr-3"></i>
+<h2 class="text-2xl font-semibold">Machine Learning</h2>
+</div>
+<div class="flex justify-center mb-4">
+<div class="image-label">
+<div class="image-container">
+<i class="fas fa-traffic-light text-red-500 text-2xl"></i>
+</div>
+<p class="text-sm">Stop Sign</p>
+</div>
+<div class="image-label">
+<div class="image-container">
+<i class="fas fa-traffic-light text-blue-500 text-2xl"></i>
+</div>
+<p class="text-sm">Not Stop Sign</p>
+</div>
+<div class="image-label">
+<div class="image-container">
+<i class="fas fa-traffic-light text-yellow-500 text-2xl"></i>
+</div>
+<p class="text-sm">Not Stop Sign</p>
+</div>
+</div>
+<div class="bg-black bg-opacity-30 p-4 rounded-lg mb-4">
+<p class="text-gray-200">
+<i class="fas fa-quote-left text-teal-300 opacity-50 mr-1"></i>
+                            Show thousands of images, labeling which are stop signs and which are not.
+                            <i class="fas fa-quote-right text-teal-300 opacity-50 ml-1"></i>
+</p>
+</div>
+<h3 class="text-lg font-semibold mb-2 text-orange-200">Benefits:</h3>
+<div class="feature-item">
+<i class="fas fa-check-circle text-teal-300 mr-2"></i>
+<p>Learns underlying patterns on its own</p>
+</div>
+<div class="feature-item">
+<i class="fas fa-check-circle text-teal-300 mr-2"></i>
+<p>Robust against variations (faded signs, angles)</p>
+</div>
+<div class="feature-item">
+<i class="fas fa-check-circle text-teal-300 mr-2"></i>
+<p>Creates its own rules and adapts</p>
+</div>
+</div>
+</div>
+<!-- Bottom Takeaway -->
+<div class="mt-6 bg-black bg-opacity-40 p-4 rounded-lg text-center">
+<p class="text-xl">
+<i class="fas fa-lightbulb text-yellow-300 mr-2"></i>
+                    Machine Learning is like teaching by example rather than giving a rigid instruction manual
+                </p>
+</div>
+<!-- Page Number -->
+<div class="absolute bottom-4 right-6 text-sm text-gray-300" style="visibility: hidden;">
+                11/19
+            </div>
+</div>
+</div>
+
+</body></html>

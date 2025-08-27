@@ -1,0 +1,131 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Envisioning Tomorrow</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        body {width: 1280px; min-height: 720px; overflow: hidden; margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            min-height: 720px;
+            position: relative;
+            background: linear-gradient(135deg, #2b1055 0%, #7597de 100%);
+            color: white;
+        }
+        .geometric {
+            position: absolute;
+            opacity: 0.1;
+        }
+        .title-glow {
+            text-shadow: 0 0 15px rgba(255, 127, 80, 0.7);
+        }
+        .future-card {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+        }
+        .future-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        @keyframes float {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-10px); }
+        }
+        .floating-icon {
+            animation: float 6s infinite ease-in-out;
+        }
+        .floating-icon:nth-child(even) {
+            animation-delay: 2s;
+        }
+        .floating-icon:nth-child(3n) {
+            animation-delay: 4s;
+        }
+    
+html {
+    overflow: hidden;
+}</style>
+</head>
+<body>
+<div class="slide flex flex-col p-12" style=" overflow: hidden;">
+<!-- Background Elements -->
+<div class="absolute inset-0 overflow-hidden">
+<div class="geometric rounded-full bg-purple-500 w-96 h-96 -bottom-20 -right-20"></div>
+<div class="geometric rounded-full bg-orange-400 w-64 h-64 top-20 -left-20"></div>
+<div class="geometric rounded-full bg-teal-400 w-80 h-80 -top-40 right-40"></div>
+</div>
+<!-- Content Container -->
+<div class="z-10 flex flex-col h-full">
+<!-- Header -->
+<div class="mb-6">
+<h1 class="text-5xl font-bold mb-4 title-glow">Envisioning Tomorrow</h1>
+<p class="text-xl text-gray-200">The future of AI is not just about smarter apps, but about new capabilities that could reshape our world</p>
+</div>
+<!-- Main Content -->
+<div class="flex flex-1">
+<!-- Left Column - Introduction -->
+<div class="w-1/2 pr-8 flex flex-col justify-center">
+<div class="mb-8">
+<h2 class="text-2xl font-semibold mb-4 text-orange-200">A New Era of Intelligence</h2>
+<p class="text-gray-200 mb-4">The AI we know today is just the beginning. The future will bring transformative changes across industries and society.</p>
+<p class="text-gray-200">This is where the story gets truly exciting, and it&#39;s a story you will help write.</p>
+</div>
+<div class="bg-black bg-opacity-30 p-6 rounded-lg border-l-4 border-teal-400">
+<h3 class="text-xl font-semibold mb-2">The Future is Unwritten</h3>
+<p class="text-gray-200">The decisions we make today about how we develop and integrate AI will have a lasting impact for generations. You are the generation that will inherit this technology and steer its course.</p>
+</div>
+</div>
+<!-- Right Column - Future Trends -->
+<div class="w-1/2 pl-8 flex flex-col">
+<h2 class="text-2xl font-semibold mb-4 text-teal-200">Emerging Transformative Paths</h2>
+<!-- Future AI Trend Cards -->
+<div class="grid grid-cols-2 gap-4">
+<!-- Card 1 -->
+<div class="future-card p-4">
+<div class="flex items-center mb-3">
+<i class="fas fa-brain text-2xl text-purple-300 mr-3 floating-icon"></i>
+<h3 class="text-lg font-semibold">Artificial General Intelligence</h3>
+</div>
+<p class="text-sm text-gray-300">Creating AI with human-level capabilities across multiple domains</p>
+</div>
+<!-- Card 2 -->
+<div class="future-card p-4">
+<div class="flex items-center mb-3">
+<i class="fas fa-heartbeat text-2xl text-orange-300 mr-3 floating-icon"></i>
+<h3 class="text-lg font-semibold">AI in Healthcare</h3>
+</div>
+<p class="text-sm text-gray-300">Personalized treatments and accelerated medical breakthroughs</p>
+</div>
+<!-- Card 3 -->
+<div class="future-card p-4">
+<div class="flex items-center mb-3">
+<i class="fas fa-leaf text-2xl text-green-300 mr-3 floating-icon"></i>
+<h3 class="text-lg font-semibold">Sustainable AI</h3>
+</div>
+<p class="text-sm text-gray-300">Balancing computational needs with environmental impact</p>
+</div>
+<!-- Card 4 -->
+<div class="future-card p-4">
+<div class="flex items-center mb-3">
+<i class="fas fa-lightbulb text-2xl text-yellow-300 mr-3 floating-icon"></i>
+<h3 class="text-lg font-semibold">Explainable AI</h3>
+</div>
+<p class="text-sm text-gray-300">Creating transparent systems that justify their decisions</p>
+</div>
+</div>
+<!-- Quote -->
+<div class="mt-auto">
+<p class="text-gray-200 italic text-right">&#34;The challenge is not just to build powerful AI, but to build wise and beneficial AI.&#34;</p>
+</div>
+</div>
+</div>
+<!-- Page Number -->
+<div class="absolute bottom-4 right-6 text-sm text-gray-300" style="visibility: hidden;">
+                15/19
+            </div>
+</div>
+</div>
+
+</body></html>

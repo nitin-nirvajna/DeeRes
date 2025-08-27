@@ -1,0 +1,157 @@
+<!DOCTYPE html><html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Emerging AI Trends</title>
+
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com"></script><style>
+        body {width: 1280px; min-height: 744px; overflow: hidden; margin: 0;
+            padding: 0;}
+        .slide {
+            width: 1280px;
+            min-height: 744px;
+            position: relative;
+            background: linear-gradient(135deg, #2b1055 0%, #7597de 100%);
+            color: white;
+        }
+        .geometric {
+            position: absolute;
+            opacity: 0.1;
+        }
+        .title-glow {
+            text-shadow: 0 0 15px rgba(255, 127, 80, 0.7);
+        }
+        .trend-card {
+            background-color: rgba(0, 0, 0, 0.3);
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            height: 100%;
+        }
+        .trend-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        .trend-icon {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 15px;
+        }
+        .trend-icon-purple {
+            background-color: rgba(138, 79, 255, 0.2);
+        }
+        .trend-icon-orange {
+            background-color: rgba(255, 127, 80, 0.2);
+        }
+        .trend-icon-teal {
+            background-color: rgba(32, 178, 170, 0.2);
+        }
+        .trend-icon-coral {
+            background-color: rgba(255, 107, 107, 0.2);
+        }
+    
+html {
+    overflow: hidden;
+}</style>
+</head>
+<body>
+<div class="slide flex flex-col p-12" style=" overflow: hidden;">
+<!-- Background Elements -->
+<div class="absolute inset-0 overflow-hidden">
+<div class="geometric rounded-full bg-purple-500 w-96 h-96 -bottom-20 -right-20"></div>
+<div class="geometric rounded-full bg-orange-400 w-64 h-64 top-20 -left-20"></div>
+<div class="geometric rounded-full bg-teal-400 w-80 h-80 -top-40 right-40"></div>
+</div>
+<!-- Content Container -->
+<div class="z-10 flex flex-col h-full">
+<!-- Header -->
+<div class="mb-6">
+<h1 class="text-5xl font-bold mb-4 title-glow">Emerging AI Trends</h1>
+<p class="text-xl text-gray-200">Transformative directions shaping AI&#39;s future</p>
+</div>
+<!-- Trends Grid -->
+<div class="grid grid-cols-2 gap-6 flex-grow">
+<!-- AGI Trend -->
+<div class="trend-card p-6">
+<div class="flex items-start">
+<div class="trend-icon trend-icon-purple mr-4">
+<i class="fas fa-brain text-3xl text-purple-300"></i>
+</div>
+<div>
+<h2 class="text-2xl font-semibold mb-2 text-purple-300">Artificial General Intelligence</h2>
+<p class="text-gray-200 mb-3">Creating AI with abilities across various tasks at a human level.</p>
+<ul class="list-disc list-inside text-gray-300 space-y-1">
+<li>Switching contexts between different problems</li>
+<li>Reasoning abstractly like humans</li>
+<li>Exhibiting common sense</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Healthcare &amp; Science Trend -->
+<div class="trend-card p-6">
+<div class="flex items-start">
+<div class="trend-icon trend-icon-orange mr-4">
+<i class="fas fa-heartbeat text-3xl text-orange-300"></i>
+</div>
+<div>
+<h2 class="text-2xl font-semibold mb-2 text-orange-300">AI in Healthcare &amp; Science</h2>
+<p class="text-gray-200 mb-3">Transforming medicine and accelerating scientific discovery.</p>
+<ul class="list-disc list-inside text-gray-300 space-y-1">
+<li>Personalized cancer treatments</li>
+<li>Early pandemic detection</li>
+<li>Drug discovery acceleration</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Sustainable AI Trend -->
+<div class="trend-card p-6">
+<div class="flex items-start">
+<div class="trend-icon trend-icon-teal mr-4">
+<i class="fas fa-leaf text-3xl text-teal-300"></i>
+</div>
+<div>
+<h2 class="text-2xl font-semibold mb-2 text-teal-300">Sustainable AI</h2>
+<p class="text-gray-200 mb-3">Addressing computational impact while creating sustainable solutions.</p>
+<ul class="list-disc list-inside text-gray-300 space-y-1">
+<li>Green AI to reduce energy consumption</li>
+<li>Optimized energy grids</li>
+<li>Monitoring deforestation &amp; biodiversity</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- Explainable AI Trend -->
+<div class="trend-card p-6">
+<div class="flex items-start">
+<div class="trend-icon trend-icon-coral mr-4">
+<i class="fas fa-search-plus text-3xl text-coral-300"></i>
+</div>
+<div>
+<h2 class="text-2xl font-semibold mb-2 text-coral-300">Explainable AI (XAI)</h2>
+<p class="text-gray-200 mb-3">Creating transparent AI systems that justify their decisions.</p>
+<ul class="list-disc list-inside text-gray-300 space-y-1">
+<li>Ending &#34;black box&#34; algorithms</li>
+<li>Building human trust in AI</li>
+<li>Ensuring fairness and detecting bias</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer Quote -->
+<div class="mt-6 text-center">
+<p class="text-lg italic text-gray-300">&#34;The future of AI is not just about smarter apps; it&#39;s about fundamentally new capabilities that could reshape our society.&#34;</p>
+</div>
+<!-- Page Number -->
+<div class="absolute bottom-4 right-6 text-sm text-gray-300" style="visibility: hidden;">
+                16/19
+            </div>
+</div>
+</div>
+
+</body></html>
